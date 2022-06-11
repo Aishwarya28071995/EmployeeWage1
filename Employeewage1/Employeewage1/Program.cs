@@ -37,7 +37,11 @@ namespace Employeewage1
                 Console.WriteLine(number);
                 empHrs = 8;
             }
-            
+            else if (number == IsPartTime)
+            {
+                Console.WriteLine(number);
+                empHrs = 4;
+            }
             else
             {
                 empHrs = 0;
