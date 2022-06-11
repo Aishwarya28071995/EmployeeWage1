@@ -4,8 +4,8 @@ namespace Employeewage1
 {
     internal class Program
     {
-        public const int IsPartTime = 4;
-        public const int IsFullTime = 8;
+        public const int IsPartTime = 2;
+        public const int IsFullTime = 1;
         public const int IsAbsent = 0;
         static void Main(string[] args)
         {
@@ -19,7 +19,7 @@ namespace Employeewage1
             int WagePerHr = 20;
                         
             Random random = new Random();
-            int number = random.Next(0, 2);
+            int number = random.Next(0, 3);
             Program program = new Program();
             int empHrs = program.GetEmpHrs(number);
 
@@ -37,6 +37,7 @@ namespace Employeewage1
                 Console.WriteLine(number);
                 empHrs = 8;
             }
+            
             else
             {
                 empHrs = 0;
