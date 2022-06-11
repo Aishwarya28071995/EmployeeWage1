@@ -18,12 +18,17 @@ namespace Employeewage1
             int Totalwage = 0;
             int WagePerHr = 20;
             int NumberOfDaysPerMonth = 20;
-            for (int i = 0; i < NumberOfDaysPerMonth; i++)
+            int Hrs = 100;
+            int WorkingDays = 0;
+            int NoOfHrs = 0;
+            while (WorkingDays<=20 && NoOfHrs<=Hrs)
             {
+                WorkingDays++;
                 Random random = new Random();
                 int number = random.Next(0, 3);
                 Program program = new Program();
                 int empHrs = program.GetEmpHrs(number);
+                NoOfHrs = NoOfHrs + empHrs;
 
                 Totalwage = Totalwage + WagePerHr * empHrs;
             }
@@ -37,6 +42,7 @@ namespace Employeewage1
             {
                 case IsFullTime:
                     empHrs = 8;
+                    
                     break;
                 case IsPartTime:
                     empHrs = 4;
